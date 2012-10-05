@@ -36,7 +36,7 @@
         new-key (if (is-cmd cur-arg) (keyword cur-arg) a-key)
         new-map (assoc a-map
                        new-key
-                       (if (= cur-arg new-key)
+                       (if (= (keyword cur-arg) new-key)
                          {}
                          (assoc (or (a-map new-key) {})
                            (arg2key cur-arg)
