@@ -1,14 +1,10 @@
 (ns cafe5.core)
-(use '[clojure.tools.cli :only [cli]])
+(use '[cafe5.lib.pessimist :as pessimist])
 
 
-(defn -main [& argv] 
-  (let [[opts args banner] (cli argv ["-p" "arg1"]
-                                     ["--yyy" "arg2"]
-                                     ["-h" "--help" "help"])]
-    (when (:help opts)
-      (println banner)
-      (System/exit 0))
+(defn -main [& argv]
+  (if (empty? argv)
+    (println "No args")
 
-    (println opts)
-    (println "Yo" argv)))
+    (let [args (pessimist/parse-argv argv)]
+      (println "Yo" args))))
