@@ -1,23 +1,49 @@
+
+;;; Converts a list like this:
+;;; ["--debug" "--zzz"
+;;;  "menu" "--new=zzzz"
+;;;  "build" "--app_root=xxx" "-f" "--formula=zzz"]
+;;;
+;;; to this:
+;;; {:build {:formula "zzz", :f true, :app_root "xxx", :build true},
+;;;  :menu {:new "zzzz", :menu true},
+;;;  :global {:zzz true, :debug true}}
+
 (ns cafe5.lib.pessimist)
-(use '[clojure.string :only (join split)])
+(use '[clojure.string])
 
-(def GLOBAL 'global')
+(def GLOBAL :global)
 
-(defn- f [arg]
-  (cond
-    (= (.substring arg 0 2) "--") (clojure.string/split arg #"=")
-    (= (.substring arg 0 1) "-") [arg, true]
-    :else arg))
+(defn- split-arg [a] (clojure.string/split a #"="))
 
+(defn- is-arg [a] (= (.substring a 0 1) "-"))
 
-(defn- fsm []
-  (def s GLOBAL)
+(def is-cmd (complement is-arg))
 
-  (fn [i]
-    (if (= (.substring i 0 1) "-")
-      [s i]
-      ((set! s i)
-       [s nil]))))
+(defn- arg2key [a]
+  (keyword (clojure.string/replace (first (split-arg a)) #"^-*" "")))
 
-(defn get-args-list [argv]
-  (into {} (for [[k v] argv] [k v])))
+(defn- format-value [a]
+  (let [arg-value (second (split-arg a))]
+    (if (nil? arg-value) true arg-value)))
+
+(defn- arg2value [cur-arg new-key]
+  (if (= cur-arg new-key) {} (format-value cur-arg)))
+
+(defn- do-parse [a-list a-map a-key]
+  (let [cur-arg (first a-list)
+        new-list (rest a-list)
+        new-key (if (is-cmd cur-arg) (keyword cur-arg) a-key)
+        new-map (assoc a-map
+                       new-key
+                       (if (= cur-arg new-key)
+                         {}
+                         (assoc (or (a-map new-key) {})
+                           (arg2key cur-arg)
+                           (arg2value cur-arg new-key))))]
+
+    (if (empty? new-list)
+      new-map
+      (do-parse new-list new-map new-key))))
+
+(defn parse-argv [argv] (do-parse argv {} GLOBAL))
