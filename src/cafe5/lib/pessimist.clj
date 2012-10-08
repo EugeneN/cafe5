@@ -10,18 +10,18 @@
 ;;;  :global {:zzz true, :debug true}}
 
 (ns cafe5.lib.pessimist)
-(use '[clojure.string])
+(require '[clojure.string :as str])
 
 (def GLOBAL :global)
 
-(defn- split-arg [a] (clojure.string/split a #"="))
+(defn- split-arg [a] (str/split a #"="))
 
 (defn- is-arg [a] (= (.substring a 0 1) "-"))
 
 (def is-cmd (complement is-arg))
 
 (defn- arg2key [a]
-  (keyword (clojure.string/replace (first (split-arg a)) #"^-*" "")))
+  (keyword (str/replace (first (split-arg a)) #"^-*" "")))
 
 (defn- format-value [a]
   (let [arg-value (second (split-arg a))]
@@ -46,4 +46,7 @@
       new-map
       (do-parse new-list new-map new-key))))
 
-(defn parse-argv [argv] (do-parse argv {} GLOBAL))
+(defn parse-argv [argv]
+  (if (empty? argv)
+    (sorted-map)
+    (do-parse argv (sorted-map) GLOBAL)))

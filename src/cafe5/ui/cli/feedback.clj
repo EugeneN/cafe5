@@ -29,7 +29,7 @@
         murmur  (if-not quiet
                   (make-fb nil (get-color :green nocolor)) (fn [msg] nil))]
 
-    (reify cafe5.protocols.feedback.IFeedback
+    (reify IFeedback
       (say     [_ msg] (say msg))
       (shout   [_ msg] (shout msg))
       (scream  [_ msg] (scream msg))

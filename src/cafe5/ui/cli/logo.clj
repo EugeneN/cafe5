@@ -1,6 +1,6 @@
 (ns cafe5.ui.cli.logo)
 (use 'colorize.core
-  '[cafe5.protocols.feedback :as fb])
+     '[cafe5.protocols.feedback])
 
 (def the-logo
   (blue
@@ -27,4 +27,4 @@
   )
 
 
-(defn draw-logo [uifb] (fb/murmur uifb the-logo))
+(defn show-logo [fb] (murmur fb the-logo))
