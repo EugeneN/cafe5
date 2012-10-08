@@ -1,0 +1,1 @@
+([:dependencies [[org.clojure/clojure "1.3.0"] [date-clj "1.0.1"] [org.clojure/tools.cli "0.2.2"] [lein-light "0.0.11"] [ibdknox/clojure "1.5.0-ibdknox5"]]])

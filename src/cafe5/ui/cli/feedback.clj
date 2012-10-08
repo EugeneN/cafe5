@@ -7,18 +7,27 @@
 
 (defn- make-fb [prefix colour]
   (fn [msg]
-    (color colour (if (nil? prefix) "" (str prefix " "))
-           (default (apply str (interpose " " (if (coll? msg) msg [msg])))))))
+    (println (color colour (if (nil? prefix) "" (str prefix " "))
+           (default (apply str (interpose " " (if (coll? msg) msg [msg]))))))))
 
 (defn- get-color [color nocolor]
   (if nocolor :default color))
 
-(defn get-fb [prefix nocolor]
-  (let [say     (make-fb prefix (get-color :green nocolor))
-        shout   (make-fb  prefix (get-color :yellow nocolor))
+(defn get-fb [prefix nocolor quiet panic_mode]
+  (let [say     (if-not quiet
+                  (make-fb prefix (get-color :green nocolor)) (fn [msg] nil))
+
+        shout   (if-not quiet
+                  (make-fb prefix (get-color :yellow nocolor)) (fn [msg] nil))
+
         scream  (make-fb prefix (get-color :red nocolor))
-        whisper (make-fb  (str DEBUG_PREFIX prefix) (get-color :red nocolor))
-        murmur  (make-fb nil (get-color :green nocolor))]
+
+        whisper (if panic_mode
+                  (make-fb  (str DEBUG_PREFIX prefix) (get-color :red nocolor))
+                  (fn [msg] nil))
+
+        murmur  (if-not quiet
+                  (make-fb nil (get-color :green nocolor)) (fn [msg] nil))]
 
     (reify cafe5.protocols.feedback.IFeedback
       (say     [_ msg] (say msg))
