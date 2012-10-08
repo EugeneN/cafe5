@@ -1,7 +1,6 @@
 (ns cafe5.protocols.feedback)
 (use 'colorize.core)
 
-
 (defprotocol IFeedback
   "Feedback adaptor is an interface which allows a program to send messages to
    users. Each particular UI must implement own feedback adaptor."
