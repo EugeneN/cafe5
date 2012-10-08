@@ -1,6 +1,7 @@
 (ns cafe5.core)
 (use '[cafe5.lib.pessimist :as pessimist]
-     '[cafe5.protocols.feedback])
+     '[cafe5.protocols.feedback]
+     '[cafe5.protocols.target])
 
 (def ^{:private true} the-help
   "Cafe is the build system for client side applications (and more).
@@ -37,26 +38,28 @@
 (def ^{:private true} TARGET-NS-PREFIX "cafe5.targets.")
 (def ^{:private true} TARGET-FILE-PREFIX "targets/")
 (def ^{:private true} TARGET-FILE-EXT ".clj")
-(def ^{:private true} TARGET-ENTRY-POINT "run")
+(def ^{:private true} TARGET-FACTORY "get-target")
 
 (defn- run-target [proto-ctx [target-kw _]]
+  (scream (:fb proto-ctx) (System/getProperty "user.dir"))
   (let [target-name (name target-kw)
         ctx (assoc proto-ctx :own-args
                              ((keyword target-name) (:full-args proto-ctx)))
         target-ns (symbol (str TARGET-NS-PREFIX target-name))
-        target-run (symbol TARGET-ENTRY-POINT )
+        target-factory (symbol TARGET-FACTORY)
         target-file (str TARGET-FILE-PREFIX target-name
                          "/" target-name TARGET-FILE-EXT)]
 
     (try
       ((load-file target-file)
-       (let [target-fn (ns-resolve target-ns target-run)]
-         (apply target-fn ctx)))
+       (let [target-factory (ns-resolve target-ns target-factory)
+             target (target-factory)]
+         (run target ctx)))
 
       (catch Exception e
-        (scream (:fb ctx) ["Error running target" target-name, (.getMessage e)])))))
+        (scream (:fb ctx) ["Error running target" target-name ":" (.getMessage e)])))))
 
-(defn- run [proto-ctx seq]
+(defn- run-seq [proto-ctx seq]
   (let [run-my-target (partial run-target proto-ctx)]
     (map run-my-target seq)))
 
@@ -69,5 +72,5 @@
     (cond version (show-version uifb)
         help    (show-help uifb)
         :else   (-> (resolve-seq args)
-                    ((partial run {:fb uifb :full-args args}))))
+                    ((partial run-seq {:fb uifb :full-args args}))))
   ))
