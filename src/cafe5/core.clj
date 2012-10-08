@@ -41,18 +41,18 @@
 (def ^{:private true} TARGET-FACTORY "get-target")
 
 (defn- run-target [proto-ctx [target-kw _]]
-  (scream (:fb proto-ctx) (System/getProperty "user.dir"))
   (let [target-name (name target-kw)
         ctx (assoc proto-ctx :own-args
                              ((keyword target-name) (:full-args proto-ctx)))
-        target-ns (symbol (str TARGET-NS-PREFIX target-name))
-        target-factory (symbol TARGET-FACTORY)
+        target-ns (symbol (str TARGET-NS-PREFIX target-name "." target-name))
+        target-factory-fn (symbol TARGET-FACTORY)
         target-file (str TARGET-FILE-PREFIX target-name
                          "/" target-name TARGET-FILE-EXT)]
 
     (try
-      ((load-file target-file)
-       (let [target-factory (ns-resolve target-ns target-factory)
+      (
+       (require target-ns)
+       (let [target-factory (ns-resolve target-ns target-factory-fn)
              target (target-factory)]
          (run target ctx)))
 
