@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9b25a5a-dcb6-4894-8bb0-01e8e4e1499a" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/cafe5/adaptors/.gitkeep" afterPath="$PROJECT_DIR$/src/cafe5/adaptors/plain_javascript_file.clj" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/cafe5/targets/compile/.gitkeep" afterPath="$PROJECT_DIR$/src/cafe5/targets/compile/compile.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cafe5.iml" afterPath="$PROJECT_DIR$/cafe5.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.clj" afterPath="$PROJECT_DIR$/project.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cafe5/core.clj" afterPath="$PROJECT_DIR$/src/cafe5/core.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cafe5/protocols/adaptor.clj" afterPath="$PROJECT_DIR$/src/cafe5/protocols/adaptor.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cafe5/targets/build/build.clj" afterPath="$PROJECT_DIR$/src/cafe5/targets/build/build.clj" />
     </list>
     <ignored path="cafe5.iws" />
@@ -88,33 +93,6 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="feedback.clj" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cafe5/ui/cli/feedback.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="4" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pessimist.clj" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cafe5/lib/pessimist.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="6" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logo.clj" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cafe5/ui/cli/logo.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="29" selection-start="2082" selection-end="2082" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="feedback.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cafe5/protocols/feedback.clj">
           <provider selected="true" editor-type-id="text-editor">
             <state line="2" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0">
@@ -141,10 +119,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core.clj" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="core.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cafe5/core.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="29" selection-start="2373" selection-end="2373" vertical-scroll-proportion="0.8003992">
+            <state line="53" column="71" selection-start="1809" selection-end="1849" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plain_javascript_file.clj" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cafe5/adaptors/plain_javascript_file.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="38" selection-start="152" selection-end="152" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feedback.clj" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cafe5/ui/cli/feedback.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="4" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -153,7 +149,7 @@
       <file leaf-file-name="adaptor.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cafe5/protocols/adaptor.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="4" selection-start="4" selection-end="4" vertical-scroll-proportion="0.0">
+            <state line="11" column="17" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -162,16 +158,25 @@
       <file leaf-file-name="build.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cafe5/targets/build/build.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="7" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
+            <state line="1" column="4" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cafe.clj" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cafe5/ui/cli/cafe.clj">
+      <file leaf-file-name="compile.clj" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cafe5/targets/compile/compile.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="131" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0">
+            <state line="21" column="32" selection-start="770" selection-end="770" vertical-scroll-proportion="0.7205589">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="project.clj" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -203,9 +208,12 @@
         <option value="$PROJECT_DIR$/src/cafe5/ui/cli/feedback.clj" />
         <option value="$PROJECT_DIR$/src/cafe5/protocols/feedback.clj" />
         <option value="$PROJECT_DIR$/src/cafe5/protocols/target.clj" />
+        <option value="$PROJECT_DIR$/src/cafe5/core.clj" />
+        <option value="$PROJECT_DIR$/project.clj" />
         <option value="$PROJECT_DIR$/src/cafe5/protocols/adaptor.clj" />
         <option value="$PROJECT_DIR$/src/cafe5/targets/build/build.clj" />
-        <option value="$PROJECT_DIR$/src/cafe5/core.clj" />
+        <option value="$PROJECT_DIR$/src/cafe5/adaptors/plain_javascript_file.clj" />
+        <option value="$PROJECT_DIR$/src/cafe5/targets/compile/compile.clj" />
       </list>
     </option>
   </component>
@@ -223,9 +231,50 @@
             <id />
           </State>
           <State>
+            <id>Android</id>
+          </State>
+          <State>
+            <id>Code style issues</id>
+          </State>
+          <State>
+            <id>CorrectnessLintAndroid</id>
+          </State>
+          <State>
+            <id>IconsUsabilityLintAndroid</id>
+          </State>
+          <State>
+            <id>LintAndroid</id>
+          </State>
+          <State>
             <id>Numeric issues</id>
           </State>
+          <State>
+            <id>Performance issues</id>
+          </State>
+          <State>
+            <id>PerformanceLintAndroid</id>
+          </State>
+          <State>
+            <id>Probable bugs</id>
+          </State>
+          <State>
+            <id>RELAX NG</id>
+          </State>
+          <State>
+            <id>UsabilityLintAndroid</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+          <State>
+            <id>XSLT</id>
+          </State>
         </expanded-state>
+        <selected-state>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -397,6 +446,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="compile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cafe5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cafe5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cafe5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="targets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="build" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -441,28 +516,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cafe5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cafe5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cafe5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="adaptors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -474,12 +527,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="project.propVCSSupport.VCSs.Git" />
+    <property name="options.lastSelected" value="preferences.editor" />
     <property name="last_opened_file_path" value="$USER_HOME$/cafe/src/lib" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -854,13 +907,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cafe5/ui/cli/feedback.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="4" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cafe5/protocols/core_protocol.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -882,23 +928,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cafe5/targets/build/build.clj">
+    <entry file="file://$PROJECT_DIR$/project.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="7" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cafe5/protocols/adaptor.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="4" selection-start="4" selection-end="4" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cafe5/core.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="29" selection-start="2373" selection-end="2373" vertical-scroll-proportion="0.8003992">
+        <state line="53" column="71" selection-start="1809" selection-end="1849" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/bultitude-0.1.5.jar!/bultitude/core.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cafe5/ui/cli/feedback.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="4" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cafe5/targets/build/build.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="4" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cafe5/protocols/adaptor.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="17" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cafe5/adaptors/plain_javascript_file.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="38" selection-start="152" selection-end="152" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cafe5/targets/compile/compile.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="32" selection-start="770" selection-end="770" vertical-scroll-proportion="0.7205589">
           <folding />
         </state>
       </provider>
@@ -943,6 +1024,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>lib</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

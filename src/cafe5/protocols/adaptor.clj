@@ -8,4 +8,5 @@
   (last-modified [adaptor ctx] "Get newest modification date")
   (harvest-tests [adaptor ctx] "Compile tests")
   (run-tests     [adaptor ctx] "Run tests, return true or list of failedtests (?)")
-  (process-deps  [adaptor ctx] "Process and install module's deps if any"))
+  (process-deps  [adaptor ctx] "Process and install module's deps if any")
+  (hello         [adaptor ctx greet] "Say hello"))

@@ -1,7 +1,7 @@
-(ns cafe5.core)
-(use '[cafe5.lib.pessimist :as pessimist]
-     '[cafe5.protocols.feedback]
-     '[cafe5.protocols.target])
+(ns cafe5.core
+  (use [cafe5.lib.pessimist :as pessimist]
+       [cafe5.protocols.feedback]
+       [cafe5.protocols.target :as p-target]))
 
 (def ^{:private true} the-help
   "Cafe is the build system for client side applications (and more).
@@ -49,21 +49,20 @@
         target-file (str TARGET-FILE-PREFIX target-name
                          "/" target-name TARGET-FILE-EXT)]
 
-;    (try
-;      ((require target-ns)
-;       (let [target-factory (ns-resolve target-ns target-factory-fn)
-;             target (target-factory)]
-;         (run target ctx)))
-;
-;      (catch Exception e
-;        (scream (:fb ctx) ["Error running target" target-name ":" (.getMessage e)])
-;        (throw e)))
-      ))
+    (try
+      (do (require target-ns)
+          (let [target-factory (ns-resolve target-ns target-factory-fn)
+                target (target-factory)]
+            (p-target/run target ctx)))
+
+      (catch Exception e
+        (scream (:fb ctx) ["Error running target" target-name ":" (.getMessage e)])
+        ;(throw e)
+        ))))
 
 (defn- run-seq [proto-ctx seq]
   (let [run-my-target (partial run-target proto-ctx)]
-    ;(whisper (:fb proto-ctx) ["aaaaa" seq])
-    (map run-my-target seq)))
+    (doseq [target-spec seq] (run-my-target target-spec))))
 
 (defn go [uifb args]
   ;(say uifb args)
@@ -71,8 +70,6 @@
   (let [{{version :version
           help    :help} :global} args
         seq (resolve-seq args)]
-
-    (say uifb ["aaa", (map #( % ) seq)])
 
     (cond version (show-version uifb)
           help    (show-help uifb)

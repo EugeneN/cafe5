@@ -1,11 +1,10 @@
-(ns cafe5.targets.build.build)
-(use 'cafe5.protocols.feedback
-     'cafe5.protocols.target)
+(ns cafe5.targets.build.build
+  (:use cafe5.protocols.feedback
+       cafe5.protocols.target))
 
 
 (defn- target-worker [ctx]
-  (say (:fb ctx) ["Hello world build" ctx])
-  true)
+  (say (:fb ctx) ["Hello world build" ctx]))
 
 (defn get-target []
   (reify ITarget
