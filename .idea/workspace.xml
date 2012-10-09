@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e9b25a5a-dcb6-4894-8bb0-01e8e4e1499a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cafe5/protocols/adaptor.clj" afterPath="$PROJECT_DIR$/src/cafe5/protocols/adaptor.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cafe5/core.clj" afterPath="$PROJECT_DIR$/src/cafe5/core.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cafe5/targets/build/build.clj" afterPath="$PROJECT_DIR$/src/cafe5/targets/build/build.clj" />
     </list>
     <ignored path="cafe5.iws" />
@@ -141,16 +141,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core.clj" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="core.clj" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cafe5/core.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="0" selection-start="1282" selection-end="2015" vertical-scroll-proportion="0.0">
+            <state line="74" column="29" selection-start="2373" selection-end="2373" vertical-scroll-proportion="0.8003992">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adaptor.clj" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="adaptor.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cafe5/protocols/adaptor.clj">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="4" selection-start="4" selection-end="4" vertical-scroll-proportion="0.0">
@@ -162,7 +162,7 @@
       <file leaf-file-name="build.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cafe5/targets/build/build.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="36" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
+            <state line="7" column="7" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -203,9 +203,9 @@
         <option value="$PROJECT_DIR$/src/cafe5/ui/cli/feedback.clj" />
         <option value="$PROJECT_DIR$/src/cafe5/protocols/feedback.clj" />
         <option value="$PROJECT_DIR$/src/cafe5/protocols/target.clj" />
+        <option value="$PROJECT_DIR$/src/cafe5/protocols/adaptor.clj" />
         <option value="$PROJECT_DIR$/src/cafe5/targets/build/build.clj" />
         <option value="$PROJECT_DIR$/src/cafe5/core.clj" />
-        <option value="$PROJECT_DIR$/src/cafe5/protocols/adaptor.clj" />
       </list>
     </option>
   </component>
@@ -715,7 +715,11 @@
       <created>1349731437777</created>
       <updated>1349731437777</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adaptor protocol draft fix2">
+      <created>1349731476997</created>
+      <updated>1349731476997</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -740,9 +744,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="22" width="1436" height="878" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.61690885" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.61690885" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.84081197" order="3" side_tool="false" content_ui="tabs" />
@@ -756,8 +760,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17507204" sideWeight="0.41743726" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17507204" sideWeight="0.38309115" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2734478" sideWeight="0.41185898" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17507204" sideWeight="0.7265522" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2734478" sideWeight="0.41185898" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32799146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -803,7 +807,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adaptor protocol draft fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adaptor protocol draft fix2" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -819,6 +823,7 @@
     <MESSAGE value="Core draft" />
     <MESSAGE value="Adaptor protocol draft" />
     <MESSAGE value="Adaptor protocol draft fix" />
+    <MESSAGE value="Adaptor protocol draft fix2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -870,20 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cafe5/targets/build/build.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="36" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cafe5/core.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1282" selection-end="2015" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cafe5/protocols/target.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="2" selection-start="100" selection-end="136" vertical-scroll-proportion="0.0">
@@ -891,9 +882,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/cafe5/targets/build/build.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="7" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cafe5/protocols/adaptor.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="4" selection-start="4" selection-end="4" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cafe5/core.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="29" selection-start="2373" selection-end="2373" vertical-scroll-proportion="0.8003992">
           <folding />
         </state>
       </provider>

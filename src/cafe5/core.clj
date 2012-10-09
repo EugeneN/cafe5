@@ -49,28 +49,32 @@
         target-file (str TARGET-FILE-PREFIX target-name
                          "/" target-name TARGET-FILE-EXT)]
 
-    (try
-      (
-       (require target-ns)
-       (let [target-factory (ns-resolve target-ns target-factory-fn)
-             target (target-factory)]
-         (run target ctx)))
-
-      (catch Exception e
-        (scream (:fb ctx) ["Error running target" target-name ":" (.getMessage e)])))))
+;    (try
+;      ((require target-ns)
+;       (let [target-factory (ns-resolve target-ns target-factory-fn)
+;             target (target-factory)]
+;         (run target ctx)))
+;
+;      (catch Exception e
+;        (scream (:fb ctx) ["Error running target" target-name ":" (.getMessage e)])
+;        (throw e)))
+      ))
 
 (defn- run-seq [proto-ctx seq]
   (let [run-my-target (partial run-target proto-ctx)]
+    ;(whisper (:fb proto-ctx) ["aaaaa" seq])
     (map run-my-target seq)))
 
 (defn go [uifb args]
-  (say uifb args)
+  ;(say uifb args)
 
   (let [{{version :version
-          help    :help} :global} args]
+          help    :help} :global} args
+        seq (resolve-seq args)]
+
+    (say uifb ["aaa", (map #( % ) seq)])
 
     (cond version (show-version uifb)
-        help    (show-help uifb)
-        :else   (-> (resolve-seq args)
-                    ((partial run-seq {:fb uifb :full-args args}))))
+          help    (show-help uifb)
+          :else   (run-seq {:fb uifb :full-args args} seq))
   ))

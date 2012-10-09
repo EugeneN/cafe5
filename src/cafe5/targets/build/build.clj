@@ -4,7 +4,8 @@
 
 
 (defn- target-worker [ctx]
-  (say (:fb ctx) ("Hello world build" ctx)))
+  (say (:fb ctx) ["Hello world build" ctx])
+  true)
 
 (defn get-target []
   (reify ITarget
