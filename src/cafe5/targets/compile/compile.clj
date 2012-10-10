@@ -19,7 +19,7 @@
 (defn- target-worker [ctx]
   (let [adaptors (get-adaptors ADAPTORS-PATH)
         the-adaptor (filter #(PAdaptor/match % ctx) adaptors)]
-    (PAdaptor/hello the-adaptor)))
+    (PAdaptor/hello the-adaptor "Yo there")))
 
 (defn get-target []
   (reify ITarget
